@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0b;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* ================= HERO ================= */
+.hero {
+    height: 100vh;
+    background: url("/images/WhatsApp\ Image\ 2026-01-15\ at\ 9.18.12\ PM.jpeg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 36px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+/* ================= SECTIONS ================= */
+.section {
+    padding: 90px 10%;
+}
+
+.section.dark {
+    background: #111;
+}
+
+.section-title {
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+}
+
+.section-text {
+    max-width: 720px;
+    color: #ccc;
+}
+
+/* ================= FEATURED WORK ================= */
+.featured-work {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 90px;
+}
+
+.featured-work.reverse {
+    flex-direction: row-reverse;
+}
+
+.work-text {
+    flex: 1;
+}
+
+.work-text h3 {
+    margin-bottom: 12px;
+}
+
+/* ================= MEDIA ================= */
+.work-media {
+    flex: 1;
+    border-radius: 10px;
+    background: #000;
+}
+
+/* IMAGES */
+.work-media.image {
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.work-media.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* VIDEOS — FIXED HEIGHT + CROPPING */
+.work-media.video {
+    max-height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-media.video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background: #000;
+}
+
+/* ================= CREEK SLIDER ================= */
+.creek-slider {
+    position: relative;
+    width: 100%;
+    /* max-height: 600px; */
+    overflow: hidden;
+    border-radius: 10px;
+    background: #000;
+    display: block;
+    min-height: 400px; /* fallback if images fail */
+}
+
+.creek-slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.creek-slider img.active {
+    opacity: 1;
+}
+
+/* LINKS */
+.youtube-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.fashion-slider {
+    position: relative;
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #000;
+    display: block;
+    min-height: 400px;
+}
+
+.fashion-slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fashion-slider img.active {
+    opacity: 1;
+}
+
+
+/* ================= TESTIMONIAL ================= */
+.testimonial {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.avatar-placeholder {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #222;
+}
+
+.testimonial-text p {
+    font-style: italic;
+    color: #ccc;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #000;
+    padding: 30px;
+    text-align: center;
+    color: #777;
+}
+
+/* ================= ANIMATIONS ================= */
+.animate {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s forwards;
+}
+
+.delay { animation-delay: .4s; }
+.delay-2 { animation-delay: .8s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: .8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .featured-work,
+    .featured-work.reverse,
+    .testimonial {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .work-media.image,
+    .work-media.video,
+    .creek-slider {
+        max-height: 300px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
