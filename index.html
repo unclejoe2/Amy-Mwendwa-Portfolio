@@ -6,12 +6,14 @@
     <title>Amy Mwendwa | Filmmaker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
 </head>
 
 <body>
 
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" style="background-image: url('images/hero.jpeg');">
         <div class="overlay"></div>
         <div class="hero-content">
             <h1 class="animate">Amy Mwendwa</h1>
@@ -81,11 +83,11 @@
                 </p>
             </div>
             <div class="work-media video">
-            <video controls preload="metadata" muted>
-                <source src="images/WhatsApp Video 2026-01-16 at 12.37.51 PM.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
+                <video controls preload="metadata" muted>
+                    <source src="images/WhatsApp Video 2026-01-16 at 12.37.51 PM.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </div>
 
         <!-- WORK 4 – VIDEO -->
@@ -124,50 +126,81 @@
         </div>
 
         <div class="featured-work reverse reveal">
-        <div class="work-text">
-            <h3>👗 Fashion Show Organizer – Meru County</h3>
-            <p>
-                Organized and coordinated fashion shows, ensuring smooth flow,
-                visual appeal, and participant management.
-            </p>
+            <div class="work-text">
+                <h3>👗 Fashion Show Organizer – Meru County</h3>
+                <p>
+                    Organized and coordinated fashion shows, ensuring smooth flow,
+                    visual appeal, and participant management.
+                </p>
+            </div>
+            <div class="work-media image fashion-slider">
+                <img src="images/WhatsApp Image 2026-01-16 at 12.37.25 PM.jpeg" class="active"
+                    alt="Fashion Show image 1">
+                <img src="images/WhatsApp Image 2026-01-16 at 12.37.26 PM.jpeg" alt="Fashion Show image 2">
+                <img src="images/WhatsApp Image 2026-01-16 at 12.37.27 PM.jpeg" alt="Fashion Show image 3">
+            </div>
         </div>
-        <div class="work-media image fashion-slider">
-            <img src="images/WhatsApp Image 2026-01-16 at 12.37.25 PM.jpeg" class="active" alt="Fashion Show image 1">
-            <img src="images/WhatsApp Image 2026-01-16 at 12.37.26 PM.jpeg" alt="Fashion Show image 2">
-            <img src="images/WhatsApp Image 2026-01-16 at 12.37.27 PM.jpeg" alt="Fashion Show image 3">
-        </div>
-    </div>
-</section>
+    </section>
 
     </section>
 
     <!-- TESTIMONIAL -->
-    <section class="section">
+    <section class="section" id="testimonial">
         <h2 class="section-title reveal">Testimonial</h2>
 
         <div class="testimonial reveal">
-            <div class="testimonial-image">
-                <div class="avatar-placeholder"></div>
-            </div>
+            <img src="images/testimonial.jpeg" alt="Producer testimonial" class="testimonial-avatar">
+
             <div class="testimonial-text">
                 <p>
                     “Working with Amy Mwendwa was a smooth and rewarding experience.
-                    Her script was powerful, original, and well-structured. She was
-                    professional, collaborative, and fully committed to the project.”
+                    Her script for <strong>The Last Take</strong> was powerful,
+                    original, and well-structured. She was professional,
+                    collaborative, and fully committed to the project from start
+                    to finish.”
                 </p>
-                <h4>— Cynthia, Producer</h4>
+                <strong>— Cynthia, Producer – The Last Take</strong>
             </div>
         </div>
     </section>
 
+
     <!-- CONTACT -->
-    <section class="section dark">
-        <h2 class="section-title reveal">Contact</h2>
-        <p class="section-text reveal">
-            Phone: +254112992730<br>
-            Instagram · Vimeo · YouTube
-        </p>
-    </section>
+   <section class="section dark" id="contact">
+    <h2 class="section-title reveal">Contact</h2>
+
+    <div class="contact-grid reveal">
+        <!-- EMAIL -->
+        <a href="mailto:amymwendwa50@gmail.com" class="contact-card">
+            <i class="fas fa-envelope"></i>
+            <span>Email</span>
+        </a>
+
+        <!-- WHATSAPP -->
+        <a href="https://wa.me/254112992730" target="_blank" class="contact-card">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+
+        <!-- CALL -->
+        <a href="tel:+254112992730" class="contact-card">
+            <i class="fas fa-phone"></i>
+            <span>Call</span>
+        </a>
+    </div>
+</section>
+
+<!-- STICKY WHATSAPP BUTTON -->
+<a
+  href="https://wa.me/254112992730"
+  class="whatsapp-sticky"
+  target="_blank"
+  aria-label="Chat on WhatsApp"
+>
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+
 
     <footer>
         <p>© 2026 Amy Mwendwa. All Rights Reserved.</p>
